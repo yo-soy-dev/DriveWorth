@@ -1,83 +1,81 @@
-# 🚗 DriveWorth - Car Price Predictor — Full Stack ML Project
+# 🚗 DriveWorth — Car Price Predictor (Full Stack ML Project)
 
 ## 📌 Project Overview
 
-Car Price Predictor is a full stack machine learning web application that predicts the selling price of a used car based on various features such as car age, fuel type, kilometers driven, transmission type, and more. The system uses a Machine Learning model served through a FastAPI backend and a Streamlit frontend for user interaction.
+DriveWorth is a full-stack machine learning web application that predicts the selling price of a used car based on key features like car age, fuel type, kilometers driven, transmission, and more.
 
-This project demonstrates the integration of Machine Learning with Web Development using API architecture.
+The system uses a trained Machine Learning model served via a FastAPI backend and an interactive Streamlit frontend for real-time predictions.
 
 ---
 
 ## 🧠 Machine Learning Model
 
-* Algorithm Used: Linear Regression / Random Forest (update based on your model)
-* Evaluation Metrics:
+* **Algorithm Used:** Random Forest Regressor
+* **Evaluation Metrics:**
 
-  * R2 Score
+  * R² Score
   * Mean Absolute Error (MAE)
   * Root Mean Squared Error (RMSE)
-* Important Features:
 
-  * Car Age
-  * Present Price
-  * Kms Driven
-  * Fuel Type
-  * Seller Type
-  * Transmission
-  * Owner
+### 🔑 Important Features:
+
+* Car Age
+* Present Price
+* Kms Driven
+* Fuel Type
+* Seller Type
+* Transmission
+* Owner
 
 ---
 
 ## 🏗️ System Architecture
 
 ```
-User → Streamlit Frontend → FastAPI Backend → ML Model → Prediction → Streamlit UI
+User → Streamlit UI → FastAPI Backend → ML Model → Prediction → UI Display
 ```
 
-### Detailed Flow:
+### 🔄 Workflow:
 
-1. User enters car details in Streamlit UI
-2. Streamlit sends data to FastAPI via HTTP POST request
-3. FastAPI processes the data and sends it to the ML model
-4. ML model predicts the car selling price
-5. FastAPI returns the prediction as JSON response
-6. Streamlit displays the predicted price and analytics
+1. User inputs car details in Streamlit UI
+2. Data is sent to FastAPI via POST request
+3. Backend processes and sends data to ML model
+4. Model predicts car price
+5. API returns prediction as JSON
+6. UI displays result with insights
 
 ---
 
 ## 🚀 Features
 
-* Full Stack Machine Learning Application
-* FastAPI Backend for ML Model Serving
-* Streamlit Frontend UI
-* Real-time Price Prediction
-* Depreciation Calculation
-* Interactive UI with Cards and Metrics
-* API Integration
+* ✅ Full Stack ML Application
+* ⚡ FastAPI Backend (high performance API)
+* 🎨 Streamlit UI (interactive dashboard)
+* 📊 Real-time price prediction
+* 📉 Depreciation calculation
+* 📦 Clean API integration
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Car-Price-Predictor/
+DriveWorth/
 │
-├── frontend/
-│   └── app.py                # Streamlit UI
+├── car-price-api/
+│   ├── cardekho_data.csv
+│   ├── feature_columns.pkl
+│   ├── main.py
+│   ├── model.py
+│   ├── random_forest_model.pkl
+│   ├── requirements.txt
+│   ├── runtime.txt
+│   ├── schema.py
+│   ├── streamlit_app.py
+│   ├── train.py
 │
-├── backend/
-│   └── main.py               # FastAPI server
-│
-├── model/
-│   ├── car_price_model.pkl
-│   ├── scaler.pkl
-│   └── columns.pkl
-│
-├── notebook/
-│   └── model_training.ipynb
-│
-├── requirements.txt
-└── README.md
+├── .gitignore
+├── README.md
 ```
 
 ---
@@ -87,8 +85,8 @@ Car-Price-Predictor/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/car-price-predictor.git
-cd car-price-predictor
+git clone https://github.com/your-username/DriveWorth.git
+cd DriveWorth/car-price-api
 ```
 
 ### 2️⃣ Install dependencies
@@ -106,7 +104,7 @@ uvicorn main:app --reload
 ### 4️⃣ Run Streamlit Frontend
 
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 ---
@@ -128,26 +126,26 @@ streamlit run app.py
 
 ## 📈 Output
 
-* Predicted Selling Price (in Lakhs)
-* Depreciation Value
-* Depreciation Percentage
-* Car Age
+* 💰 Predicted Selling Price (in Lakhs)
+* 📉 Depreciation Value
+* 📊 Depreciation Percentage
+* 📅 Car Age
 
 ---
 
 ## 🔮 Future Improvements
 
-* Deploy FastAPI on cloud (Render / AWS)
+* Deploy FastAPI on Render / AWS
 * Deploy Streamlit on Streamlit Cloud
-* Add more ML models for comparison
-* Add model accuracy visualization
-* Add price trend visualization
+* Add multiple ML model comparison
+* Add accuracy visualization charts
+* Add price trend analysis
 
 ---
 
 ## 👨‍💻 Author
 
-Devansh Tiwari
+**Devansh Kumar Tiwari**
 
 ---
 
@@ -165,8 +163,10 @@ Devansh Tiwari
 
 ## ⚠️ Disclaimer
 
-This project is for educational purposes only and the predicted price may not reflect actual market prices.
+This project is for educational purposes only and predictions may not reflect actual market prices.
 
 ---
 
-## ⭐ If you like this project, give it a star on GitHub!
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!

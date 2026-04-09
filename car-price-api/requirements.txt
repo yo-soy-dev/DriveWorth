@@ -7,4 +7,3 @@ joblib
 pydantic
 streamlit
 requests
-python-3.14.3
